@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Wed Jan 31 2024 15:07:16 GMT+0000 (Coordinated Universal Time) -->
+<!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Wed Jan 31 2024 15:10:00 GMT+0000 (Coordinated Universal Time) -->
 <html
   data-wf-domain="oluwafemis-website-and-profile.webflow.io"
   data-wf-page="63e5e8d05ff3a97284d4171c"
@@ -37,7 +37,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link
-      href="https://assets-global.website-files.com/63e5e8d05ff3a9cf79d4171b/css/oluwafemis-website-and-profile.webflow.2ad10a409.css"
+      href="https://assets-global.website-files.com/63e5e8d05ff3a9cf79d4171b/css/oluwafemis-website-and-profile.webflow.070904f1b.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -1393,7 +1393,7 @@
           let isScrambled = false;
           let scrambleInterval;
 
-          element.addEventListener("mouseenter", () => {
+          element.addEventListener('mouseenter', () => {
             if (!isScrambled) {
               isScrambled = true;
               scrambleInterval = setInterval(() => {
@@ -1403,7 +1403,7 @@
             }
           });
 
-          element.addEventListener("mouseleave", () => {
+          element.addEventListener('mouseleave', () => {
             if (isScrambled) {
               clearInterval(scrambleInterval);
               element.innerText = originalText;
@@ -1413,15 +1413,15 @@
         });
 
         function scrambleText(text) {
-          const chars = "010100010111010101000101101001";
-          let scrambledText = "";
+          const chars = '010100010111010101000101101001';
+          let scrambledText = '';
 
           for (let i = 0; i < text.length; i++) {
             const char = text[i];
-            const isWhitespace = char === " ";
+            const isWhitespace = char === ' ';
 
             if (isWhitespace) {
-              scrambledText += " ";
+              scrambledText += ' ';
             } else {
               const randomChar = getRandomChar(chars);
               scrambledText += randomChar;
@@ -1435,10 +1435,11 @@
           const randomIndex = Math.floor(Math.random() * chars.length);
           return chars[randomIndex];
         }
-      } // Link Text Scrambler Controller:
-      createTextScrambler(".menu-link");
-      createTextScrambler(".header-link");
-      createTextScrambler("#scrambled-text");
+      }
+            } // Link Text Scrambler Controller:
+            createTextScrambler(".menu-link");
+            createTextScrambler(".header-link");
+            createTextScrambler("#scrambled-text");
     </script>
     <!-- GSAP library -->
     <script
